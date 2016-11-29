@@ -53,6 +53,7 @@ namespace SelliT.WebUI.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            System.Web.Mvc.DependencyResolver.SetResolver(new SelliT.WebUI.Infrastructure.NinjectDependencyResolver(kernel));
         }        
     }
 }

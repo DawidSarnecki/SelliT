@@ -1,0 +1,40 @@
+﻿@using SelliT.Domain.Entities
+@model IEnumerable<Product>
+
+@{
+    ViewBag.Title = "Table";
+}
+
+<table class = "table">
+    <thead>
+        <tr>
+            <th> Nazwa </th>
+            <th> jm  </th>
+            <th class="text-right"> Cena </th>
+            <th class="text-right"> Ilość </th>
+            <th class="text-right"> Wartość </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td class="text-center"> @p.Name </td>
+                <td class="text-left"> @p.Unit.ToString() </td>
+                <td class="text-right"> @p.Quantity.ToString("c")</td>
+                <td class="text-right"> @p.Price.ToString("c")</td>
+                <td class="text-right"> @((p.Price * p.Quantity).ToString("c"))</td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" class="text-right">Razem:</td>
+            <td class="text-right"></td>
+        </tr>
+    </tfoot>
+
+    
+</table>
+
+

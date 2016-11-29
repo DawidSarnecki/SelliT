@@ -108,6 +108,16 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SelliT.Domain\SelliT.Domain.csproj">
+      <Project>{da60f023-e4bc-407d-8442-8ed69853f9db}</Project>
+      <Name>SelliT.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SelliT.WebUI\SelliT.WebUI.csproj">
+      <Project>{69b28094-ab5d-407f-af67-49ad17fdcff2}</Project>
+      <Name>SelliT.WebUI</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
