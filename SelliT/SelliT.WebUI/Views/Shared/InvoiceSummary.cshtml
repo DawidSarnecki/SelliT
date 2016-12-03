@@ -1,0 +1,22 @@
+﻿@model SelliT.Domain.Entities.Product
+
+    <tr>
+        <td class="text-center">  </td>
+        <td class="text-left"> @Model.Name </td>
+        <td class="text-right"> @Model.Unit </td>
+        <td class="text-right"> @Model.Quantity</td>
+        <td class="text-right"> @Model.Price.ToString("c")</td>
+        <td class="text-right"> @((Model.Price * Model.Quantity).ToString("c"))</td>
+        <td class="text-right"> @(Model.Tax.ToString()) %</td>
+        <td class="text-right"> @((Model.Price * Model.Quantity * Model.Tax / 100).ToString("c"))</td>
+        <td class="text-right"> @((Model.Quantity * Model.Price * (Model.Tax + 100) / 100).ToString("c"))</td>
+        <td>
+            @using (Html.BeginForm("RemoveFromCart", "Cart"))
+            {
+                <input class="btn btn-sm btn-warning"
+                       type="submit" value="Usuń" />
+            }
+        </td>
+    </tr>
+
+

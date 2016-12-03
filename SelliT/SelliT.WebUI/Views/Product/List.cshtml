@@ -2,7 +2,7 @@
 @model IEnumerable<Product>
 
 @{
-    ViewBag.Title = "Table";
+    ViewBag.Title = "Invoice";
 }
 
 <table class = "table">
@@ -22,17 +22,7 @@
     <tbody>
         @foreach (var p in Model)
         {
-            <tr>
-                <td class="text-center">  </td>
-                <td class="text-left"> @p.Name </td>
-                <td class="text-right"> @p.Unit </td>
-                <td class="text-right"> @p.Quantity</td>
-                <td class="text-right"> @p.Price.ToString("c")</td>
-                <td class="text-right"> @((p.Price * p.Quantity).ToString("c"))</td>
-                <td class="text-right"> @(p.Tax.ToString()) %</td>
-                <td class="text-right"> @((p.Price * p.Quantity * p.Tax /100).ToString("c"))</td>
-                <td class="text-right"> @((p.Quantity * p.Price * (p.Tax + 100) /100).ToString("c"))</td>
-            </tr>
+            @Html.Partial("InvoiceSummary", p);
         }
     </tbody>
     <tfoot>
@@ -41,8 +31,6 @@
             <td class="text-right"></td>
         </tr>
     </tfoot>
-
-    
 </table>
 
 
