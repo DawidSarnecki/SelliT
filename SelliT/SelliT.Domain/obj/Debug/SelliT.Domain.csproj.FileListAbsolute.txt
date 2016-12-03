@@ -16,3 +16,7 @@ D:\MVC NET\SelliT\SelliT\SelliT.Domain\bin\Debug\System.Web.WebPages.Razor.xml
 D:\MVC NET\SelliT\SelliT\SelliT.Domain\obj\Debug\SelliT.Domain.csprojResolveAssemblyReference.cache
 D:\MVC NET\SelliT\SelliT\SelliT.Domain\obj\Debug\SelliT.Domain.dll
 D:\MVC NET\SelliT\SelliT\SelliT.Domain\obj\Debug\SelliT.Domain.pdb
+D:\MVC NET\SelliT\SelliT\SelliT.Domain\bin\Debug\EntityFramework.dll
+D:\MVC NET\SelliT\SelliT\SelliT.Domain\bin\Debug\EntityFramework.SqlServer.dll
+D:\MVC NET\SelliT\SelliT\SelliT.Domain\bin\Debug\EntityFramework.xml
+D:\MVC NET\SelliT\SelliT\SelliT.Domain\bin\Debug\EntityFramework.SqlServer.xml

@@ -8,28 +8,36 @@
 <table class = "table">
     <thead>
         <tr>
+            <th> Lp. </th>
             <th> Nazwa </th>
-            <th> jm  </th>
-            <th class="text-right"> Cena </th>
             <th class="text-right"> Ilość </th>
-            <th class="text-right"> Wartość </th>
+            <th class="text-right"> Jm  </th>
+            <th class="text-right"> Cena netto </th>
+            <th class="text-right"> Wartość netto </th>
+            <th class="text-right"> VAT </th>
+            <th class="text-right"> Kwota VAT </th>
+            <th class="text-right"> Wartość brutto </th>
         </tr>
     </thead>
     <tbody>
         @foreach (var p in Model)
         {
             <tr>
-                <td class="text-center"> @p.Name </td>
-                <td class="text-left"> @p.Unit.ToString() </td>
-                <td class="text-right"> @p.Quantity.ToString("c")</td>
+                <td class="text-center">  </td>
+                <td class="text-left"> @p.Name </td>
+                <td class="text-right"> @p.Unit </td>
+                <td class="text-right"> @p.Quantity</td>
                 <td class="text-right"> @p.Price.ToString("c")</td>
                 <td class="text-right"> @((p.Price * p.Quantity).ToString("c"))</td>
+                <td class="text-right"> @(p.Tax.ToString()) %</td>
+                <td class="text-right"> @((p.Price * p.Quantity * p.Tax /100).ToString("c"))</td>
+                <td class="text-right"> @((p.Quantity * p.Price * (p.Tax + 100) /100).ToString("c"))</td>
             </tr>
         }
     </tbody>
     <tfoot>
         <tr>
-            <td colspan="3" class="text-right">Razem:</td>
+            <td colspan="8" class="text-right">Razem: </td>
             <td class="text-right"></td>
         </tr>
     </tfoot>

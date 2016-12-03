@@ -13,6 +13,7 @@ namespace SelliT.WebUI
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //Adding the Default Route
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

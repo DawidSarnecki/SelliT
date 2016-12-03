@@ -17,6 +17,7 @@ namespace SelliT.WebUI.Controllers
             this.repository = productRepository;
         }
 
+        //Action Method Liat()
         public ViewResult List()
         {
             return View(repository.Products);

@@ -45,3 +45,7 @@ D:\MVC NET\SelliT\SelliT\SelliT.WebUI\bin\System.Web.Mvc.xml
 D:\MVC NET\SelliT\SelliT\SelliT.WebUI\obj\Debug\SelliT.WebUI.csprojResolveAssemblyReference.cache
 D:\MVC NET\SelliT\SelliT\SelliT.WebUI\obj\Debug\SelliT.WebUI.dll
 D:\MVC NET\SelliT\SelliT\SelliT.WebUI\obj\Debug\SelliT.WebUI.pdb
+D:\MVC NET\SelliT\SelliT\SelliT.WebUI\bin\EntityFramework.dll
+D:\MVC NET\SelliT\SelliT\SelliT.WebUI\bin\EntityFramework.SqlServer.dll
+D:\MVC NET\SelliT\SelliT\SelliT.WebUI\bin\EntityFramework.xml
+D:\MVC NET\SelliT\SelliT\SelliT.WebUI\bin\EntityFramework.SqlServer.xml
