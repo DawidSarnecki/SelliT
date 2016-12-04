@@ -22,7 +22,24 @@
     <tbody>
         @foreach (var p in Model)
         {
-            @Html.Partial("InvoiceSummary", p);
+            <tr>
+                <td class="text-center">  </td>
+                <td class="text-left"> @p.Name </td>
+                <td class="text-right"> @p.Unit </td>
+                <td class="text-right"> @p.Quantity</td>
+                <td class="text-right"> @p.Price.ToString("c")</td>
+                <td class="text-right"> @((p.Price * p.Quantity).ToString("c"))</td>
+                <td class="text-right"> @(p.Tax.ToString()) %</td>
+                <td class="text-right"> @((p.Price * p.Quantity * p.Tax / 100).ToString("c"))</td>
+                <td class="text-right"> @((p.Quantity *p.Price * (p.Tax + 100) / 100).ToString("c"))</td>
+                <td>
+                    @using (Html.BeginForm("RemoveFromCart", "Cart"))
+                    {
+                        <input class="btn btn-sm btn-warning"
+                               type="submit" value="Usuń" />
+                    }
+                </td>
+            </tr>
         }
     </tbody>
     <tfoot>

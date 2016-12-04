@@ -33,7 +33,7 @@ namespace SelliT.WebUI.Infrastructure
         private void AddBindings()
         {
             kernel.Bind<IProductRepository>().To<EFProductRepository>();
-
+            kernel.Bind<IContractorRepository>().To<EFContractorRepository>();
         }
     }
 }

@@ -1,0 +1,36 @@
+﻿@using SelliT.Domain.Entities
+@model IEnumerable<Contractor>
+
+@{
+    ViewBag.Title = "Contractor";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th> Lp. </th>
+            <th> Nazwa </th>
+            <th class="text-right"> Adres </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td class="text-center">  </td>
+                <td class="text-left"> @p.Name </td>
+                <td class="text-right"> @p.NIP </td>
+                <td class="text-right"> @p.Street, @p.Number, @p.ZipCode, @p.City</td>
+                <td>
+                    @using (Html.BeginForm("RemoveContractor", "ContractorList"))
+                    {
+                        <input class="btn btn-sm btn-warning"
+                               type="submit" value="Usuń" />
+                    }
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SelliT.Domain.Entities
 {
-    class Contractor
+    public class Contractor
     {
-        public int ID { get; set; }
+        public Guid ID { get; set; }
         public string Name { get; set; }
         public string NIP { set; get; }
         public string Street { set; get; }

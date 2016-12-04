@@ -12,5 +12,6 @@ namespace SelliT.Domain.Concrete
     class EfDbContext : DbContext 
     {
         public DbSet<Product> Products { get; set; }
+        public DbSet<Contractor> Contractor { get; set; }
     }
 }

@@ -8,7 +8,7 @@ namespace SelliT.Domain.Entities
 {
     class Invoice
     {
-        public int ID { get; set; }
+        public Guid ID { get; set; }
         public string Number { get; set; }
         public string PurchaserID { get; set; }
         public string SellerID { get; set; }
